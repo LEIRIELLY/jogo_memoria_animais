@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória dos Animais</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="overlay">
+        <h1 class="game-title">Jogo da Memória dos Animais</h1>
+        <button id="startButton">Iniciar Jogo</button>
+    </div>
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+    <div class="memory-game hidden">
+        <!-- Cartas do jogo -->
+        <div class="memory-card" data-animal="gato">
+            <img class="front-face" src="Gato.jpeg" alt="Gato">
+            <img class="back-face" src="back.jpeg" alt="Verso">
+        </div>
+        <div class="memory-card" data-animal="gato">
+            <img class="front-face" src="Gato.jpeg" alt="Gato">
+            <img class="back-face" src="back.jpeg" alt="Verso">
+        </div>
+        <div class="memory-card" data-animal="cachorro">
+            <img class="front-face" src="cachorro.png" alt="Cachorro">
+            <img class="back-face" src="back.jpeg" alt="Verso">
+        </div>
+        <div class="memory-card" data-animal="cachorro">
+            <img class="front-face" src="cachorro.png" alt="Cachorro">
+            <img class="back-face" src="back.jpeg" alt="Verso">
+        </div>
+        <!-- Adicione mais cartas conforme necessário -->
+    </div>
+    <div id="result-message"></div>
+    <button id="newGameButton" class="hidden">Novo Jogo</button>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

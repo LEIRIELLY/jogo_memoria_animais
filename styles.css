@@ -1,0 +1,137 @@
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('fundo\ principal.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.5; /* Ajuste a opacidade conforme necessário */
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.sidebar {
+    width: 25%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    width: 75%;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1.game-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+    width: 100%;
+    max-width: 640px;
+    height: 20px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.progress {
+    height: 100%;
+    background-color: #76c7c0;
+    width: 0;
+    transition: width 1s linear;
+}
+
+.memory-game {
+    width: 640px;
+    height: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    z-index: 1;
+}
+
+.memory-game.hidden {
+    display: none;
+}
+
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.memory-card img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.memory-card .front-face {
+    transform: rotateY(180deg);
+}
+
+#startButton, #newGameButton {
+    font-size: 1.5em;
+    padding: 15px 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#newGameButton.hidden {
+    display: none;
+}
+
+#result-message {
+    font-size: 2em; /* Aumente o tamanho da fonte */
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.overlay {
+    background-color: rgba(19, 176, 90, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1;
+}
