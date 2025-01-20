@@ -15,7 +15,7 @@ let matchCount = 0;
 const animals = [
     { name: 'gato', img: 'Gato.jpeg' },
     { name: 'cachorro', img: 'cachorro.png' },
-    { name: 'elefante', img: 'elefante.png' },
+    { name: 'elefante', img: 'elefante.jpeg' },
     { name: 'leao', img: 'leao.png' },
     { name: 'tigre', img: 'tigre.png' },
     { name: 'macaco', img: 'macaco.png' }
